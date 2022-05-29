@@ -31,3 +31,17 @@ Proactive and efficient newbie developer.\ I am able to determine the needs and 
 5. ## link() technologies used
    -
    -
+
+## Code Examples:
+
+## Work Experience:
+
+## Education:
+
+### Saint-Petersburg University of the Humanities and Social Sciences
+
+#### Bachelor of Laws
+
+### FreeCodeCamp
+
+#### Responsive Web Design
