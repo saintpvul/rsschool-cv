@@ -9,9 +9,11 @@
 
 :root {
   --main-white: #fffcec;
-  --main-lightGray: #c6c3b4;
-  --main-olive: #659b91;
-  --main-deepGreen: #005b49;
+  --main-lightSilver: #ced7c7;
+  --main-pistachio: #9db3a7;
+  --main-lightGray: #718f8c;
+  --main-normalBlue: #4b6b73;
+  --main-deepBlue: #2f4858;
 }
 
 /* box/font sizing */
@@ -54,7 +56,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.4;
-  color: var(--main-white);
+  color: var(--main-lightSilver);
 }
 
 h1,
@@ -81,12 +83,12 @@ h4 {
   font-size: 2.4rem;
 }
 
-nav > ul {
+ul {
   list-style: none;
 }
 
 a {
-  color: var(--main-white);
+  color: var(--main-lightSilver);
   text-decoration: none;
 }
 
@@ -104,7 +106,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--main-deepGreen);
+  background: var(--main-deepBlue);
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
@@ -130,7 +132,9 @@ a {
 }
 
 .nav-list a:hover {
-  background: var(--main-olive);
+  background: var(--main-pistachio);
+  color: var(--main-deepBlue);
+  transition: 0.4s;
 }
 
 /* about me section */
@@ -142,7 +146,11 @@ a {
   width: 100%;
   height: 100vh;
   background: #000;
-  background-image: linear-gradient(60deg, #555555 0%, #181818 100%);
+  background-image: linear-gradient(
+    150deg,
+    var(--main-normalBlue) 0%,
+    #181818 100%
+  );
 }
 
 .about-me .photo {
@@ -151,11 +159,12 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 10vw;
+  top: 13vw;
   right: 30vw;
   height: 32vw;
   width: 24vw;
   border-radius: 5%;
+  box-shadow: 3px 5px 20px var(--main-pistachio);
 }
 
 .about-me .main-desc {
@@ -164,7 +173,7 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -20vw;
+  top: -15vw;
   right: -20vw;
   width: 50vw;
   height: auto;
@@ -178,7 +187,7 @@ a {
 .projects {
   padding: 10rem 2rem;
   text-align: center;
-  background: var(--main-olive);
+  background: var(--main-normalBlue);
 }
 
 .section-heading {
@@ -195,33 +204,41 @@ a {
 
 .p-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minimax (320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 4rem;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 @media (max-width: 30em) {
   .projects {
     padding: 6rem 1rem;
   }
+
   .p-grid {
     grid-template-columns: 1fr;
   }
 }
 
 .project {
-  background: var(--main-olive);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: var(--main-normalBlue);
+  box-shadow: 2px 2px 10px var(--main-deepBlue);
   border-radius: 3px;
+  transition: 0.3s ease;
 }
 
 .code-signs {
-  color: var(--main-olive);
+  color: var(--main-normalBlue);
   transition: color 0.3s ease-out;
   font-weight: 700;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
 }
 
 .project:hover .code-signs {
@@ -235,7 +252,7 @@ a {
 }
 .p-title {
   font-size: 2rem;
-  padding: 2rem 0.5rem;
+  padding: 1.5rem 0.5rem;
 }
 
 .btn {
@@ -246,14 +263,81 @@ a {
 
 .show-all-btn {
   font-size: 2rem;
-  background: var(--main-olive);
+  background: var(--main-pistachio);
   transition: background 0.3s ease-out;
 }
 
 .show-all-btn:hover {
-  background: var(--main-deepGreen);
+  background: var(--main-deepBlue);
+  color: var(--main-pistacio);
 }
 
 .show-all-btn:hover > i {
   transform: translateX(6px);
+  transition: 0.3s ease-in-out;
+}
+
+/* code skills section */
+
+.code-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.code-skills {
+  padding: 10rem 2rem;
+  text-align: center;
+  background: var(--main-deepBlue);
+  border-top: 0.3rem solid var(--main-lightGray);
+}
+
+@media (max-width: 30em) {
+  .code-skills {
+    transition: none;
+  }
+}
+
+.skills {
+  padding: 1rem;
+  border-right: 0.3rem solid var(--main-lightGray);
+}
+
+.skills-list {
+  padding: 2rem;
+  font-size: 3rem;
+}
+
+.skills:hover {
+  border: 1rem solid var(--main-lightSilver);
+  transition: 0.3s ease-in-out;
+}
+
+.code {
+  border-left: 0.3rem solid var(--main-lightGray);
+}
+
+.code:hover {
+  border: 1rem solid var(--main-lightSilver);
+  transition: 0.3s ease-in-out;
+}
+.code > pre {
+  padding-left: 2rem;
+}
+
+.code-xmpl {
+  color: var(--main-lightSilver);
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.xmpl-heading {
+  color: var(--main-pistachio);
+  font-size: 3.4rem;
+  margin: 0;
+  padding: 0;
 }
