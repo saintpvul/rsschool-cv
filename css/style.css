@@ -343,10 +343,16 @@ a {
   transition: 0.3s ease-in-out;
 }
 
-.skills .skills-list {
+.skills-list {
   line-height: 8rem;
   font-size: 3rem;
   color: var(--main-pistachio);
+  border: 2px solid var(--main-deepBlue);
+  transition: 0.3s ease-in-out;
+}
+
+.skills-list:hover {
+  border: 2px solid var(--main-accentOrange);
 }
 
 .code {
@@ -370,8 +376,14 @@ a {
 
 .code-xmpl {
   color: var(--main-lightSilver);
+  border: 2px solid var(--main-deepBlue);
   font-size: 1.8rem;
   text-align: left;
+  transition: 0.3s ease-in-out;
+}
+
+.code-xmpl:hover {
+  border: 2px solid var(--main-accentOrange);
 }
 
 .xmpl-heading {
