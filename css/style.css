@@ -558,21 +558,46 @@ footer {
     align-items: center;
   }
 }
-
 footer > .footer-year {
   position: relative;
   left: 65rem;
   bottom: 0.8rem;
   font-size: 2rem;
 }
-footer > .footer-nick {
+.footer-nick {
   position: relative;
-  bottom: 0.4rem;
-  font-size: 3rem;
+  bottom: 1rem;
+  font-size: 2rem;
+  transition: 0.3s ease;
 }
 
-footer > .footer-logo {
+.footer-nick:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+}
+
+@media (max-width: 30rem) {
+  .footer-nick {
+    transform: none;
+  }
+}
+
+.footer-logo {
   position: relative;
   top: 1rem;
   left: 100rem;
+  transition: 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+}
+
+@media (max-width: 30rem) {
+  .footer-logo {
+    transform: none;
+  }
 }
