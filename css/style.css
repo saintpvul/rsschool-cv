@@ -203,10 +203,18 @@ a {
   border-bottom: 0.3rem solid var(--main-lightGray);
   padding-bottom: 2rem;
   color: var(--main-lightSilver);
-  text-shadow: 3px 3px 5px var(--main-deepBlue);
   font-size: 6rem;
 }
 
+.section-heading:hover {
+  text-shadow: 5px 5px 10px var(--main-lightSilver);
+  transition: 0.3s ease-in-out;
+}
+
+.shadow:hover {
+  text-shadow: 5px 5px 10px var(--main-lightSilver);
+  transition: 0.3s ease-in-out;
+}
 @media (max-width: 30em) {
   .section-heading {
     font-size: 4rem;
@@ -241,16 +249,16 @@ a {
   transition: 0.3s ease;
 }
 
-.code-signs {
-  color: var(--main-normalBlue);
-  transition: color 0.3s ease-out;
-  font-weight: 700;
-}
-
 .project:hover {
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
+}
+
+.code-signs {
+  color: var(--main-normalBlue);
+  transition: color 0.3s ease-out;
+  font-weight: 700;
 }
 
 .project:hover .code-signs {
@@ -327,8 +335,12 @@ a {
 
 .skills > .section-heading {
   color: var(--main-lightSilver);
-  text-shadow: 3px 3px 5px var(--main-lightGray);
   font-size: 6rem;
+}
+
+.skills > .section-heading:hover {
+  text-shadow: 5px 5px 10px var(--main-lightSilver);
+  transition: 0.3s ease-in-out;
 }
 
 .skills .skills-list {
@@ -345,6 +357,11 @@ a {
   color: var(--main-lightSilver);
   text-shadow: 3px 3px 5px var(--main-lightGray);
   font-size: 6rem;
+}
+
+.code > .section-heading:hover {
+  text-shadow: 5px 5px 10px var(--main-lightSilver);
+  transition: 0.3s ease-in-out;
 }
 
 .code > pre {
@@ -473,13 +490,22 @@ a {
 
 .work > .section-heading {
   color: var(--main-lightSilver);
-  text-shadow: 3px 3px 5px var(--main-deepBlue);
   font-size: 6rem;
 }
+
+.work > .section-heading:hover {
+  text-shadow: 5px 5px 10px var(--main-lightSilver);
+  transition: 0.3s ease-in-out;
+}
+
 .education > .section-heading {
   color: var(--main-lightSilver);
-  text-shadow: 3px 3px 5px var(--main-deepBlue);
   font-size: 6rem;
+}
+
+.education > .section-heading:hover {
+  text-shadow: 5px 5px 10px var(--main-lightSilver);
+  transition: 0.3s ease-in-out;
 }
 
 /* contacts section */
@@ -505,8 +531,24 @@ a {
   font-size: 3rem;
   text-align: center;
   color: var(--main-lightSilver);
-  text-shadow: 3px 3px 5px var(--main-pistachio);
 }
+
+.contacts:hover {
+  animation: neon-background 2s ease-in-out infinite;
+}
+
+@keyframes neon-background {
+  0% {
+    text-shadow: none;
+  }
+  65% {
+    text-shadow: 12px 12px 30px var(--main-lightSilver);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
 .contacts-head > h2 {
   font-size: 4rem;
 }
@@ -533,11 +575,10 @@ a {
 }
 .contacts-link {
   font-size: 2rem;
-  text-shadow: 2px 2px 1px var(--main-deepBlue);
   transition: transform 0.3s ease-in-out;
 }
 .contacts-link:hover {
-  transform: translateY(6px);
+  transform: translateY(10px);
 }
 
 /* footer */
