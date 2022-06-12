@@ -171,10 +171,14 @@ a {
   height: 32vw;
   width: 24vw;
   border-radius: 5%;
+  transition: 0.5s ease-in-out;
+}
+
+.photo:hover {
   box-shadow: 3px 5px 20px var(--main-pistachio);
 }
 
-.about-me .main-desc {
+.main-desc {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,6 +190,7 @@ a {
   height: auto;
   padding: 1.5rem;
   line-height: 2.5rem;
+  transition: 0.3s ease-in-out;
 }
 .about-me .bold {
   font-weight: 700;
@@ -211,9 +216,20 @@ a {
   transition: 0.3s ease-in-out;
 }
 
-.shadow:hover {
-  text-shadow: 5px 5px 10px var(--main-lightSilver);
-  transition: 0.3s ease-in-out;
+.about-me:hover .shadow {
+  animation: neon-background 5s ease-in-out infinite;
+}
+
+@keyframes neon-background {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 12px 12px 30px var(--main-lightSilver);
+  }
+  100% {
+    text-shadow: none;
+  }
 }
 @media (max-width: 30em) {
   .section-heading {
