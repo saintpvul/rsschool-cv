@@ -442,9 +442,14 @@ a {
 
 .edu-places {
   text-align: left;
-  border: 2px solid var(--main-accentOrange);
+  border: 2px solid var(--main-normalBlue);
   margin: 2rem;
   padding: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.edu-places:hover {
+  border: 2px solid var(--main-accentOrange);
 }
 
 .period-settings {
@@ -453,10 +458,18 @@ a {
 }
 
 .color-obj {
-  color: var(--main-accentOrange);
+  color: var(--main-lightSilver);
+  opacity: 0.8;
   text-shadow: 3px 3px 5px var(--main-deepBlue);
   font-size: 2rem;
+  transition: 0.3s ease-in-out;
 }
+
+.color-obj:hover {
+  color: var(--main-accentOrange);
+  opacity: 0.8;
+}
+
 .divider {
   color: var(--main-lightGray);
 }
@@ -476,9 +489,14 @@ a {
 .work-company {
   margin-top: 2rem;
   text-align: left;
-  border: 2px solid var(--main-accentOrange);
+  border: 2px solid var(--main-normalBlue);
   margin: 2rem;
   padding: 2rem;
+  transition: 0.3s ease-in-out;
+}
+
+.work-company:hover {
+  border: 2px solid var(--main-accentOrange);
 }
 .work-place {
   padding-left: 2rem;
