@@ -27,6 +27,10 @@ Proactive and efficient newbie developer.\ I am able to determine the needs and 
    - HTML
    - CSS
    - JS
+1. ## link(https://playing-with-css-vars.netlify.app/) technologies used
+   -HTML
+   -CSS
+   -JS
 
 ## Code Examples:
 
