@@ -14,6 +14,16 @@ Proactive and efficient newbie developer.\ I am able to determine the needs and 
 ## My projects:
 
 1. ## link(https://keyboard-drum-kit-ex.netlify.app/) technologies used
+
+   - HTML
+   - CSS
+   - JS
+
+1. ## link(https://keyboard-drum-kit-ex.netlify.app/) technologies used
+   - HTML
+   - CSS
+   - JS
+1. ## link(https://css-plus-js-clock.netlify.app/) technologies used
    - HTML
    - CSS
    - JS
